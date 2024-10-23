@@ -41,6 +41,10 @@ function getGC(code) {
                 var regexStart = /Start time:\s*(\d{1,2}:\d{2}\s*[APM]{2})/;
 
                 var match = str.match(regexStart);
+                if (match[1] === null) {
+                    alert("Please login to geocaching.com before processing events.");
+                    return;
+                }
                 if (match) {
                     var startTime = match[1]; // This will contain 'x:xx AM or PM'
                     start = convertTo24HourFormat(startTime);
