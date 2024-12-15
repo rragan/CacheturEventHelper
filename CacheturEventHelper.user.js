@@ -38,7 +38,7 @@ function getGC(code) {
             url: "https://www.geocaching.com/geocache/" + code,
             onload: function(response) {
                 var str = response.responseText;
-                var regexStart = /Start time:\s*(\d{1,2}:\d{2}\s*[APM]{2})/;
+                var regexStart = /Start time:\s*(\d+:\d+\s*[A|P]M)/;
 
                 var match = str.match(regexStart);
                 if (match[1] === null) {
@@ -51,7 +51,7 @@ function getGC(code) {
                 } else {
                     console.log('No start match found.');
                 }
-                var regexEnd = /End time:\s*(\d{1,2}:\d{2}\s*[APM]{2})/;
+                var regexEnd = /End time:\s*(\d+:\d+\s*[A|P]M)/;
 
                 var matchEnd = str.match(regexEnd);
                 if (matchEnd) {
