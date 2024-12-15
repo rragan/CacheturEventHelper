@@ -2,7 +2,7 @@
 // @name            Cachetur event time helper
 // @author          cachetur.no, thomfre, rragan (derived from cachetur assistant)
 // @namespace       http://cachetur.no/
-// @version         1.0.0
+// @version         1.0.1
 // @description     Script to fill in event start/end times for cachetur
 // @match           https://cachetur.no/admin/eventer
 // @connect         cachetur.no
